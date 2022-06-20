@@ -2,9 +2,10 @@ import "./styles.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Social from "./Components/Social";
+// import Card from "./Components/Card";
 export default function App() {
   const [data, setdata] = useState([]);
-  const [loadmore, setloadmore] = useState(0);
+  const [loadmore, setloadmore] = useState([0]);
 
   useEffect(() => {
     // Pass in a callback function!
@@ -21,6 +22,7 @@ export default function App() {
         Getting data from an Api and dumping it on screen using react Custom
         Component{" "}
       </h2>
+
       <button onClick={() => setloadmore(loadmore + 1)}>Load More</button>
       <div>
         {data.map((res, index) => {
